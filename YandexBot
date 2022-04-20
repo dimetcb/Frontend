@@ -20,11 +20,10 @@ return Math.floor(Math.random() * (max - min) + min);
 }
 if (text !== null){
 text = document.getElementById('text');
+let keyword = keywords[getRandom(0, keywords.length)];
 text.value = keyword;
 let button = document.querySelectorAll(".mini-suggest__button")[0];
 let timerId = setTimeout(function() {button.click();}, 2000);
-//if (button !== undefined) {
-//clearTimeout(timerId);
 } else {
 for (let i = 0; i < links.length; i++) {
     if (links[i].href.indexOf("leroymerlin.ru") !== -1) {
