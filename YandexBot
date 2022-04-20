@@ -1,0 +1,61 @@
+// ==UserScript==
+// @name         YandexBot
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       Dmitriy Bezrukov
+// @match        https://yandex.ru/*
+// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+// @grant        none
+// ==/UserScript==
+
+//let keywords = ["газонокосилки","садовый инвентарь","все для ремонта"];
+//let keyword = keywords[getRandom(0, keywords.length)];
+//let button = document.querySelectorAll(".mini-suggest__button")[0];
+//let links = document.links;
+//let text = document.getElementById('text');
+//text.value = keyword;
+
+
+//function getRandom(min, max) {
+  //return Math.floor(Math.random() * (max - min) + min);
+//}
+
+//if (1 == 1) {
+
+//document.querySelector(".mini-suggest__button")[0].click();
+//} else {
+  //for (let i = 0; i < links.length; i++) {
+    //if (links[i].href.indexOf("leroymerlin.ru") !== -1) {
+      //let link = links[i];
+      //console.log("Нашел строку " + links[i]);
+      //link.setAttribute('target', '_self');
+      //link.click();
+      //break;
+    //}
+  //}
+//}
+let keywords = ["газонокосилки","садовый инвентарь","все для ремонта"];
+let keyword = keywords[getRandom(0, keywords.length)];
+let text = document.getElementById('text');
+text.value = keyword;
+let links = document.links;
+let button = document.querySelectorAll(".mini-suggest__button")[0];
+function getRandom(min, max) {
+return Math.floor(Math.random() * (max - min) + min);
+}
+
+let timerId = setTimeout(function() {button.click();}, 2000);
+//if (button !== undefined) {
+//clearTimeout(timerId);
+//} else {
+for (let i = 0; i < links.length; i++) {
+    if (links[i].href.indexOf("leroymerlin.ru") !== -1) {
+      let link = links[i];
+      console.log("Нашел строку " + links[i]);
+      link.setAttribute('target','_self');
+      link.click();
+      break;
+    }
+  }
+ //}
