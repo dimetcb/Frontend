@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY</title>
+    <style>
+      body {
+        background-image: url(/img/fon_jqery.jpg);
+        width: 100%;
+        position: fixed;
+        opacity: 0.7;
+      }
+      .window-text {
+        display: none;
+      }
+      .window {
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        padding: 20px;
+        width: 360px;
+        margin-left: -200px;
+        background: rgb(190, 189, 182);
+        border: 2px solid orange;
+        border-radius: 8px;
+        z-index: 1000;
+        opacity: 1;
+      }
+      .window-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+      .window-open {
+        height: 50px;
+        width: 150px;
+        margin-top: 200px;
+        background-color: aqua;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="window-open" href="#">Открыть текст</button>
+    <div class="window-text">
+      <div class="window">
+        <a class="window-close" href="#">Закрыть</a>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe ullam
+          non mollitia nisi, maxime possimus quo et ea veritatis nostrum impedit
+          obcaecati a totam cum blanditiis tempore fugit quod illo. Incidunt ab,
+          tenetur quasi magnam totam quo ipsum rerum dignissimos consequatur,
+          vero, minus necessitatibus laudantium alias numquam. Est esse
+          consequatur sapiente eum obcaecati, facilis ullam sint totam ipsa?
+          Itaque, perferendis. Soluta fugiat commodi beatae iure placeat dicta,
+          assumenda, totam ratione repellat minima quas laborum, aliquid
+          repellendus natus animi quibusdam eaque aliquam rem delectus harum
+          quis numquam ut ex ab! Natus.
+        </p>
+      </div>
+    </div>
+
+    <script src="/jquery-3.6.0.min.js"></script>
+    <script src="../jquery.js"></script>
+  </body>
+</html>
